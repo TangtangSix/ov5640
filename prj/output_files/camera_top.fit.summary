@@ -1,0 +1,16 @@
+Fitter Status : Successful - Sat Jul 16 14:47:56 2022
+Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Standard Edition
+Revision Name : camera_top
+Top-level Entity Name : camera_top
+Family : Cyclone IV E
+Device : EP4CE6F17C8
+Timing Models : Final
+Total logic elements : 2,872 / 6,272 ( 46 % )
+    Total combinational functions : 2,223 / 6,272 ( 35 % )
+    Dedicated logic registers : 1,636 / 6,272 ( 26 % )
+Total registers : 1703
+Total pins : 75 / 180 ( 42 % )
+Total virtual pins : 0
+Total memory bits : 210,944 / 276,480 ( 76 % )
+Embedded Multiplier 9-bit elements : 0 / 30 ( 0 % )
+Total PLLs : 2 / 2 ( 100 % )

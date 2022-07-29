@@ -1,0 +1,6 @@
+Warning (10273): Verilog HDL warning at sdr.v(971): extended using "x" or "z" File: G:/FPGAProject/EP4CE6F17C8/ov5640/sim/sdram_slave_model/sdram_slave_model/sdr.v Line: 971
+Warning (10273): Verilog HDL warning at sdr.v(974): extended using "x" or "z" File: G:/FPGAProject/EP4CE6F17C8/ov5640/sim/sdram_slave_model/sdram_slave_model/sdr.v Line: 974
+Warning (10268): Verilog HDL information at sdr.v(187): always construct contains both blocking and non-blocking assignments File: G:/FPGAProject/EP4CE6F17C8/ov5640/sim/sdram_slave_model/sdram_slave_model/sdr.v Line: 187
+Info (10281): Verilog HDL Declaration information at vga_drive.v(4): object "h_sync" differs only in case from object "H_SYNC" in the same scope File: G:/FPGAProject/EP4CE6F17C8/ov5640/src/vga_drive.v Line: 4
+Info (10281): Verilog HDL Declaration information at vga_drive.v(5): object "v_sync" differs only in case from object "V_SYNC" in the same scope File: G:/FPGAProject/EP4CE6F17C8/ov5640/src/vga_drive.v Line: 5
+Info (10281): Verilog HDL Declaration information at i2c_master.v(12): object "done" differs only in case from object "DONE" in the same scope File: G:/FPGAProject/EP4CE6F17C8/ov5640/src/i2c_master.v Line: 12

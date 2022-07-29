@@ -1,0 +1,108 @@
+EDA Netlist Writer report for camera_top
+Sat Jul 16 14:48:13 2022
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. EDA Netlist Writer Summary
+  3. Simulation Settings
+  4. Simulation Generated Files
+  5. EDA Netlist Writer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------+
+; EDA Netlist Writer Summary                                        ;
++---------------------------+---------------------------------------+
+; EDA Netlist Writer Status ; Successful - Sat Jul 16 14:48:13 2022 ;
+; Revision Name             ; camera_top                            ;
+; Top-level Entity Name     ; camera_top                            ;
+; Family                    ; Cyclone IV E                          ;
+; Simulation Files Creation ; Successful                            ;
++---------------------------+---------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Simulation Settings                                                                                                           ;
++---------------------------------------------------------------------------------------------------+---------------------------+
+; Option                                                                                            ; Setting                   ;
++---------------------------------------------------------------------------------------------------+---------------------------+
+; Tool Name                                                                                         ; ModelSim-Altera (Verilog) ;
+; Generate functional simulation netlist                                                            ; Off                       ;
+; Time scale                                                                                        ; 1 ps                      ;
+; Truncate long hierarchy paths                                                                     ; Off                       ;
+; Map illegal HDL characters                                                                        ; Off                       ;
+; Flatten buses into individual nodes                                                               ; Off                       ;
+; Maintain hierarchy                                                                                ; Off                       ;
+; Bring out device-wide set/reset signals as ports                                                  ; Off                       ;
+; Enable glitch filtering                                                                           ; Off                       ;
+; Do not write top level VHDL entity                                                                ; Off                       ;
+; Disable detection of setup and hold time violations in the input registers of bi-directional pins ; Off                       ;
+; Architecture name in VHDL output netlist                                                          ; structure                 ;
+; Generate third-party EDA tool command script for RTL functional simulation                        ; Off                       ;
+; Generate third-party EDA tool command script for gate-level simulation                            ; Off                       ;
++---------------------------------------------------------------------------------------------------+---------------------------+
+
+
++-----------------------------------------------------------------------------------------------+
+; Simulation Generated Files                                                                    ;
++-----------------------------------------------------------------------------------------------+
+; Generated Files                                                                               ;
++-----------------------------------------------------------------------------------------------+
+; G:/FPGAProject/EP4CE6F17C8/ov5640/prj/simulation/modelsim/camera_top_8_1200mv_85c_slow.vo     ;
+; G:/FPGAProject/EP4CE6F17C8/ov5640/prj/simulation/modelsim/camera_top_8_1200mv_0c_slow.vo      ;
+; G:/FPGAProject/EP4CE6F17C8/ov5640/prj/simulation/modelsim/camera_top_min_1200mv_0c_fast.vo    ;
+; G:/FPGAProject/EP4CE6F17C8/ov5640/prj/simulation/modelsim/camera_top.vo                       ;
+; G:/FPGAProject/EP4CE6F17C8/ov5640/prj/simulation/modelsim/camera_top_8_1200mv_85c_v_slow.sdo  ;
+; G:/FPGAProject/EP4CE6F17C8/ov5640/prj/simulation/modelsim/camera_top_8_1200mv_0c_v_slow.sdo   ;
+; G:/FPGAProject/EP4CE6F17C8/ov5640/prj/simulation/modelsim/camera_top_min_1200mv_0c_v_fast.sdo ;
+; G:/FPGAProject/EP4CE6F17C8/ov5640/prj/simulation/modelsim/camera_top_v.sdo                    ;
++-----------------------------------------------------------------------------------------------+
+
+
++-----------------------------+
+; EDA Netlist Writer Messages ;
++-----------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime EDA Netlist Writer
+    Info: Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
+    Info: Processing started: Sat Jul 16 14:48:07 2022
+Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off camera -c camera_top
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (204019): Generated file camera_top_8_1200mv_85c_slow.vo in folder "G:/FPGAProject/EP4CE6F17C8/ov5640/prj/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file camera_top_8_1200mv_0c_slow.vo in folder "G:/FPGAProject/EP4CE6F17C8/ov5640/prj/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file camera_top_min_1200mv_0c_fast.vo in folder "G:/FPGAProject/EP4CE6F17C8/ov5640/prj/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file camera_top.vo in folder "G:/FPGAProject/EP4CE6F17C8/ov5640/prj/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file camera_top_8_1200mv_85c_v_slow.sdo in folder "G:/FPGAProject/EP4CE6F17C8/ov5640/prj/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file camera_top_8_1200mv_0c_v_slow.sdo in folder "G:/FPGAProject/EP4CE6F17C8/ov5640/prj/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file camera_top_min_1200mv_0c_v_fast.sdo in folder "G:/FPGAProject/EP4CE6F17C8/ov5640/prj/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file camera_top_v.sdo in folder "G:/FPGAProject/EP4CE6F17C8/ov5640/prj/simulation/modelsim/" for EDA simulation tool
+Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 4684 megabytes
+    Info: Processing ended: Sat Jul 16 14:48:14 2022
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:07
+
+
