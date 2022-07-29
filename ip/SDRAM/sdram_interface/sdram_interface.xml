@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<deploy
+ date="2022.07.06.15:46:11"
+ outputDirectory="G:/FPGAProject/EP4CE6F17C8/ov5640/ip/SDRAM/sdram_interface/">
+ <perimeter>
+  <parameter
+     name="AUTO_GENERATION_ID"
+     type="Integer"
+     defaultValue="0"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_UNIQUE_ID"
+     type="String"
+     defaultValue=""
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_DEVICE_FAMILY"
+     type="String"
+     defaultValue="Cyclone IV E"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_DEVICE"
+     type="String"
+     defaultValue="EP4CE6F17C8"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_DEVICE_SPEEDGRADE"
+     type="String"
+     defaultValue="8"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_CLK_CLOCK_RATE"
+     type="Long"
+     defaultValue="-1"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_CLK_CLOCK_DOMAIN"
+     type="Integer"
+     defaultValue="-1"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_CLK_RESET_DOMAIN"
+     type="Integer"
+     defaultValue="-1"
+     onHdl="0"
+     affectsHdl="1" />
+  <interface name="avs_port" kind="avalon" start="0">
+   <property name="addressAlignment" value="DYNAMIC" />
+   <property name="addressGroup" value="0" />
+   <property name="addressSpan" value="33554432" />
+   <property name="addressUnits" value="WORDS" />
+   <property name="alwaysBurstMaxBurst" value="false" />
+   <property name="associatedClock" value="clk" />
+   <property name="associatedReset" value="reset" />
+   <property name="bitsPerSymbol" value="8" />
+   <property name="bridgedAddressOffset" value="0" />
+   <property name="bridgesToMaster" value="" />
+   <property name="burstOnBurstBoundariesOnly" value="false" />
+   <property name="burstcountUnits" value="WORDS" />
+   <property name="constantBurstBehavior" value="false" />
+   <property name="explicitAddressSpan" value="0" />
+   <property name="holdTime" value="0" />
+   <property name="interleaveBursts" value="false" />
+   <property name="isBigEndian" value="false" />
+   <property name="isFlash" value="false" />
+   <property name="isMemoryDevice" value="true" />
+   <property name="isNonVolatileStorage" value="false" />
+   <property name="linewrapBursts" value="false" />
+   <property name="maximumPendingReadTransactions" value="7" />
+   <property name="maximumPendingWriteTransactions" value="0" />
+   <property name="minimumUninterruptedRunLength" value="1" />
+   <property name="printableDevice" value="false" />
+   <property name="readLatency" value="0" />
+   <property name="readWaitStates" value="1" />
+   <property name="readWaitTime" value="1" />
+   <property name="registerIncomingSignals" value="false" />
+   <property name="registerOutgoingSignals" value="false" />
+   <property name="setupTime" value="0" />
+   <property name="timingUnits" value="Cycles" />
+   <property name="transparentBridge" value="false" />
+   <property name="wellBehavedWaitrequest" value="false" />
+   <property name="writeLatency" value="0" />
+   <property name="writeWaitStates" value="0" />
+   <property name="writeWaitTime" value="0" />
+   <port name="avs_port_address" direction="input" role="address" width="24" />
+   <port
+       name="avs_port_byteenable_n"
+       direction="input"
+       role="byteenable_n"
+       width="2" />
+   <port
+       name="avs_port_chipselect"
+       direction="input"
+       role="chipselect"
+       width="1" />
+   <port
+       name="avs_port_writedata"
+       direction="input"
+       role="writedata"
+       width="16" />
+   <port name="avs_port_read_n" direction="input" role="read_n" width="1" />
+   <port name="avs_port_write_n" direction="input" role="write_n" width="1" />
+   <port
+       name="avs_port_readdata"
+       direction="output"
+       role="readdata"
+       width="16" />
+   <port
+       name="avs_port_readdatavalid"
+       direction="output"
+       role="readdatavalid"
+       width="1" />
+   <port
+       name="avs_port_waitrequest"
+       direction="output"
+       role="waitrequest"
+       width="1" />
+  </interface>
+  <interface name="clk" kind="clock" start="0">
+   <property name="clockRate" value="100000000" />
+   <property name="externallyDriven" value="false" />
+   <property name="ptfSchematicName" value="" />
+   <port name="clk_clk" direction="input" role="clk" width="1" />
+  </interface>
+  <interface name="mem_port" kind="conduit" start="0">
+   <property name="associatedClock" value="" />
+   <property name="associatedReset" value="" />
+   <port name="mem_port_addr" direction="output" role="addr" width="13" />
+   <port name="mem_port_ba" direction="output" role="ba" width="2" />
+   <port name="mem_port_cas_n" direction="output" role="cas_n" width="1" />
+   <port name="mem_port_cke" direction="output" role="cke" width="1" />
+   <port name="mem_port_cs_n" direction="output" role="cs_n" width="1" />
+   <port name="mem_port_dq" direction="bidir" role="dq" width="16" />
+   <port name="mem_port_dqm" direction="output" role="dqm" width="2" />
+   <port name="mem_port_ras_n" direction="output" role="ras_n" width="1" />
+   <port name="mem_port_we_n" direction="output" role="we_n" width="1" />
+  </interface>
+  <interface name="reset" kind="reset" start="0">
+   <property name="associatedClock" value="clk" />
+   <property name="synchronousEdges" value="DEASSERT" />
+   <port name="reset_reset_n" direction="input" role="reset_n" width="1" />
+  </interface>
+ </perimeter>
+ <entity
+   path=""
+   parameterizationKey="sdram_interface:1.0:AUTO_CLK_CLOCK_DOMAIN=-1,AUTO_CLK_CLOCK_RATE=-1,AUTO_CLK_RESET_DOMAIN=-1,AUTO_DEVICE=EP4CE6F17C8,AUTO_DEVICE_FAMILY=Cyclone IV E,AUTO_DEVICE_SPEEDGRADE=8,AUTO_GENERATION_ID=1657093567,AUTO_UNIQUE_ID=(clock_source:18.1:clockFrequency=100000000,clockFrequencyKnown=true,inputClockFrequency=0,resetSynchronousEdges=DEASSERT)(altera_avalon_new_sdram_controller:18.1:TAC=5.5,TMRD=3,TRCD=20.0,TRFC=70.0,TRP=20.0,TWR=20.0,addressWidth=24,bankWidth=2,casLatency=3,clockRate=100000000,columnWidth=9,componentName=sdram_interface_sdram_interface,dataWidth=16,generateSimulationModel=false,initNOPDelay=0.0,initRefreshCommands=2,masteredTristateBridgeSlave=0,model=single_Micron_MT48LC4M32B2_7_chip,numberOfBanks=4,numberOfChipSelects=1,pinsSharedViaTriState=false,powerUpDelay=200.0,refreshPeriod=7.8125,registerDataIn=true,rowWidth=13,size=33554432)(clock:18.1:)(reset:18.1:)"
+   instancePathKey="sdram_interface"
+   kind="sdram_interface"
+   version="1.0"
+   name="sdram_interface">
+  <parameter name="AUTO_CLK_CLOCK_RATE" value="-1" />
+  <parameter name="AUTO_GENERATION_ID" value="1657093567" />
+  <parameter name="AUTO_DEVICE" value="EP4CE6F17C8" />
+  <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone IV E" />
+  <parameter name="AUTO_CLK_RESET_DOMAIN" value="-1" />
+  <parameter name="AUTO_CLK_CLOCK_DOMAIN" value="-1" />
+  <parameter name="AUTO_UNIQUE_ID" value="" />
+  <parameter name="AUTO_DEVICE_SPEEDGRADE" value="8" />
+  <generatedFiles>
+   <file
+       path="G:/FPGAProject/EP4CE6F17C8/ov5640/ip/SDRAM/sdram_interface/synthesis/sdram_interface.v"
+       type="VERILOG" />
+  </generatedFiles>
+  <childGeneratedFiles>
+   <file
+       path="G:/FPGAProject/EP4CE6F17C8/ov5640/ip/SDRAM/sdram_interface/synthesis/submodules/sdram_interface_sdram_interface.v"
+       type="VERILOG"
+       attributes="" />
+  </childGeneratedFiles>
+  <sourceFiles>
+   <file
+       path="G:/FPGAProject/EP4CE6F17C8/ov5640/ip/SDRAM/sdram_interface.qsys" />
+  </sourceFiles>
+  <childSourceFiles>
+   <file
+       path="C:/intelfpga/18.1/ip/altera/sopc_builder_ip/altera_avalon_new_sdram_controller/altera_avalon_new_sdram_controller_hw.tcl" />
+  </childSourceFiles>
+  <messages>
+   <message level="Debug" culprit="sdram_interface">queue size: 0 starting:sdram_interface "sdram_interface"</message>
+   <message level="Progress" culprit="min"></message>
+   <message level="Progress" culprit="max"></message>
+   <message level="Progress" culprit="current"></message>
+   <message level="Debug">Transform: CustomInstructionTransform</message>
+   <message level="Debug">No custom instruction connections, skipping transform </message>
+   <message level="Debug" culprit="merlin_custom_instruction_transform"><![CDATA[After transform: <b>2</b> modules, <b>2</b> connections]]></message>
+   <message level="Debug">Transform: MMTransform</message>
+   <message level="Debug">Transform: InterruptMapperTransform</message>
+   <message level="Debug">Transform: InterruptSyncTransform</message>
+   <message level="Debug">Transform: InterruptFanoutTransform</message>
+   <message level="Debug">Transform: AvalonStreamingTransform</message>
+   <message level="Debug">Transform: ResetAdaptation</message>
+   <message level="Debug" culprit="sdram_interface"><![CDATA["<b>sdram_interface</b>" reuses <b>altera_avalon_new_sdram_controller</b> "<b>submodules/sdram_interface_sdram_interface</b>"]]></message>
+   <message level="Debug" culprit="sdram_interface">queue size: 0 starting:altera_avalon_new_sdram_controller "submodules/sdram_interface_sdram_interface"</message>
+   <message level="Info" culprit="sdram_interface">Starting RTL generation for module 'sdram_interface_sdram_interface'</message>
+   <message level="Info" culprit="sdram_interface">  Generation command is [exec C:/intelfpga/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga/18.1/quartus/bin64/perl/lib -I C:/intelfpga/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga/18.1/quartus/sopc_builder/bin -I C:/intelfpga/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_new_sdram_controller -- C:/intelfpga/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_new_sdram_controller/generate_rtl.pl --name=sdram_interface_sdram_interface --dir=C:/Users/len/AppData/Local/Temp/alt9179_7998783013112011239.dir/0004_sdram_interface_gen/ --quartus_dir=C:/intelfpga/18.1/quartus --verilog --config=C:/Users/len/AppData/Local/Temp/alt9179_7998783013112011239.dir/0004_sdram_interface_gen//sdram_interface_sdram_interface_component_configuration.pl  --do_build_sim=0  ]</message>
+   <message level="Info" culprit="sdram_interface">Done RTL generation for module 'sdram_interface_sdram_interface'</message>
+   <message level="Info" culprit="sdram_interface"><![CDATA["<b>sdram_interface</b>" instantiated <b>altera_avalon_new_sdram_controller</b> "<b>sdram_interface</b>"]]></message>
+  </messages>
+ </entity>
+ <entity
+   path="submodules/"
+   parameterizationKey="altera_avalon_new_sdram_controller:18.1:TAC=5.5,TMRD=3,TRCD=20.0,TRFC=70.0,TRP=20.0,TWR=20.0,addressWidth=24,bankWidth=2,casLatency=3,clockRate=100000000,columnWidth=9,componentName=sdram_interface_sdram_interface,dataWidth=16,generateSimulationModel=false,initNOPDelay=0.0,initRefreshCommands=2,masteredTristateBridgeSlave=0,model=single_Micron_MT48LC4M32B2_7_chip,numberOfBanks=4,numberOfChipSelects=1,pinsSharedViaTriState=false,powerUpDelay=200.0,refreshPeriod=7.8125,registerDataIn=true,rowWidth=13,size=33554432"
+   instancePathKey="sdram_interface:.:sdram_interface"
+   kind="altera_avalon_new_sdram_controller"
+   version="18.1"
+   name="sdram_interface_sdram_interface">
+  <parameter name="registerDataIn" value="true" />
+  <parameter name="casLatency" value="3" />
+  <parameter name="refreshPeriod" value="7.8125" />
+  <parameter name="masteredTristateBridgeSlave" value="0" />
+  <parameter name="TMRD" value="3" />
+  <parameter name="pinsSharedViaTriState" value="false" />
+  <parameter name="clockRate" value="100000000" />
+  <parameter name="TRP" value="20.0" />
+  <parameter name="numberOfChipSelects" value="1" />
+  <parameter name="columnWidth" value="9" />
+  <parameter name="componentName" value="sdram_interface_sdram_interface" />
+  <parameter name="TRFC" value="70.0" />
+  <parameter name="generateSimulationModel" value="false" />
+  <parameter name="dataWidth" value="16" />
+  <parameter name="rowWidth" value="13" />
+  <parameter name="bankWidth" value="2" />
+  <parameter name="powerUpDelay" value="200.0" />
+  <parameter name="TWR" value="20.0" />
+  <parameter name="size" value="33554432" />
+  <parameter name="TAC" value="5.5" />
+  <parameter name="initRefreshCommands" value="2" />
+  <parameter name="TRCD" value="20.0" />
+  <parameter name="initNOPDelay" value="0.0" />
+  <parameter name="addressWidth" value="24" />
+  <parameter name="numberOfBanks" value="4" />
+  <generatedFiles>
+   <file
+       path="G:/FPGAProject/EP4CE6F17C8/ov5640/ip/SDRAM/sdram_interface/synthesis/submodules/sdram_interface_sdram_interface.v"
+       type="VERILOG"
+       attributes="" />
+  </generatedFiles>
+  <childGeneratedFiles/>
+  <sourceFiles>
+   <file
+       path="C:/intelfpga/18.1/ip/altera/sopc_builder_ip/altera_avalon_new_sdram_controller/altera_avalon_new_sdram_controller_hw.tcl" />
+  </sourceFiles>
+  <childSourceFiles/>
+  <instantiator instantiator="sdram_interface" as="sdram_interface" />
+  <messages>
+   <message level="Debug" culprit="sdram_interface">queue size: 0 starting:altera_avalon_new_sdram_controller "submodules/sdram_interface_sdram_interface"</message>
+   <message level="Info" culprit="sdram_interface">Starting RTL generation for module 'sdram_interface_sdram_interface'</message>
+   <message level="Info" culprit="sdram_interface">  Generation command is [exec C:/intelfpga/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga/18.1/quartus/bin64/perl/lib -I C:/intelfpga/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga/18.1/quartus/sopc_builder/bin -I C:/intelfpga/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_new_sdram_controller -- C:/intelfpga/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_new_sdram_controller/generate_rtl.pl --name=sdram_interface_sdram_interface --dir=C:/Users/len/AppData/Local/Temp/alt9179_7998783013112011239.dir/0004_sdram_interface_gen/ --quartus_dir=C:/intelfpga/18.1/quartus --verilog --config=C:/Users/len/AppData/Local/Temp/alt9179_7998783013112011239.dir/0004_sdram_interface_gen//sdram_interface_sdram_interface_component_configuration.pl  --do_build_sim=0  ]</message>
+   <message level="Info" culprit="sdram_interface">Done RTL generation for module 'sdram_interface_sdram_interface'</message>
+   <message level="Info" culprit="sdram_interface"><![CDATA["<b>sdram_interface</b>" instantiated <b>altera_avalon_new_sdram_controller</b> "<b>sdram_interface</b>"]]></message>
+  </messages>
+ </entity>
+</deploy>

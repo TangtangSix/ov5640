@@ -1,0 +1,25 @@
+	component sdram_interface is
+		port (
+			avs_port_address       : in    std_logic_vector(23 downto 0) := (others => 'X'); -- address
+			avs_port_byteenable_n  : in    std_logic_vector(1 downto 0)  := (others => 'X'); -- byteenable_n
+			avs_port_chipselect    : in    std_logic                     := 'X';             -- chipselect
+			avs_port_writedata     : in    std_logic_vector(15 downto 0) := (others => 'X'); -- writedata
+			avs_port_read_n        : in    std_logic                     := 'X';             -- read_n
+			avs_port_write_n       : in    std_logic                     := 'X';             -- write_n
+			avs_port_readdata      : out   std_logic_vector(15 downto 0);                    -- readdata
+			avs_port_readdatavalid : out   std_logic;                                        -- readdatavalid
+			avs_port_waitrequest   : out   std_logic;                                        -- waitrequest
+			clk_clk                : in    std_logic                     := 'X';             -- clk
+			mem_port_addr          : out   std_logic_vector(12 downto 0);                    -- addr
+			mem_port_ba            : out   std_logic_vector(1 downto 0);                     -- ba
+			mem_port_cas_n         : out   std_logic;                                        -- cas_n
+			mem_port_cke           : out   std_logic;                                        -- cke
+			mem_port_cs_n          : out   std_logic;                                        -- cs_n
+			mem_port_dq            : inout std_logic_vector(15 downto 0) := (others => 'X'); -- dq
+			mem_port_dqm           : out   std_logic_vector(1 downto 0);                     -- dqm
+			mem_port_ras_n         : out   std_logic;                                        -- ras_n
+			mem_port_we_n          : out   std_logic;                                        -- we_n
+			reset_reset_n          : in    std_logic                     := 'X'              -- reset_n
+		);
+	end component sdram_interface;
+

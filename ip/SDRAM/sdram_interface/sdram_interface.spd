@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simPackage>
+ <file
+   path="simulation/submodules/sdram_interface_sdram_interface.v"
+   type="VERILOG"
+   library="sdram_interface" />
+ <file path="simulation/sdram_interface.v" type="VERILOG" />
+ <topLevel name="sdram_interface" />
+ <deviceFamily name="cycloneive" />
+</simPackage>
